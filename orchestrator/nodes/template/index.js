@@ -1,12 +1,11 @@
 "use strict";
 
-let fs = require('fs');
-let path = require('path');
-var dojot = require('@dojot/flow-node');
-let handlebars = require('handlebars');
-var logger = require("../../logger").logger;
+const fs = require('fs');
+const path = require('path');
+const dojot = require('@dojot/flow-node');
+const handlebars = require('handlebars');
+const logger = require("../../logger").logger;
 
-// Sample node implementation
 class DataHandler extends dojot.DataHandlerBase {
   constructor() {
     super();
@@ -39,16 +38,16 @@ class DataHandler extends dojot.DataHandlerBase {
    * @param  {[string]} locale Locale string, such as "en-US"
    * @return {[object]}        Locale settings used by the module
    */
-  getLocaleData(locale) {
-
-    let filepath = path.join(__dirname, "locales/" + locale + "/template.json");
+ /* getLocaleData(locale) {
+    console.log('getLocaleData locale',locale);
+    let filepath = path.join(__dirname, "locales/" + locale + "/default.json");
     if (fs.existsSync(filepath)) {
       return require(filepath);
     } else {
       return null;
     }
 
-  }
+  }*/
 
   /**
    * Check if the node configuration is valid

@@ -1,6 +1,6 @@
 {
   "name": "@dojot/flow-node",
-  "version": "3.0.0-alpha2",
+  "version": "3.0.0-alpha4",
   "description": "Basic interface to dojot's flowbroker",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,8 @@
   },
   "author": "Matheus Magalhaes",
   "contributors": [
-    { "name": "Raul Negreiros" }
+    { "name": "Raul Negreiros" },
+    { "name": "mprevide" }
   ],
   "license": "GPL-3.0",
   "repository" : {

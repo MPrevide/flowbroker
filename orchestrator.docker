@@ -4,6 +4,8 @@ WORKDIR /opt/flowbroker/orchestrator
 
 RUN apk --no-cache add gcc g++ musl-dev make python bash zlib-dev
 
+RUN npm set registry http://10.202.21.25:4873
+
 COPY orchestrator/package.json ./package.json
 COPY orchestrator/package-lock.json ./package-lock.json
 RUN npm install
