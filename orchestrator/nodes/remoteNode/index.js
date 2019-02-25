@@ -28,12 +28,12 @@ class RemoteNodeHandler extends dojot.DataHandlerBase {
     return this.dispatcher.sendRequest({command: 'metadata'})
       .then(meta => {
         this.metadata = meta.payload;
-        return this.dispatcher.sendRequest({ command: 'html' })
+        return this.dispatcher.sendRequest({ command: 'html' });
       })
       .then(html => {
         this.html = '/tmp/' + this.id;
         fs.writeFileSync(this.html, html.payload);
-        return this.dispatcher.sendRequest({ command: 'locale', locale: 'en-US' })
+        return this.dispatcher.sendRequest({ command: 'locale', locale: 'en-US' });
       })
       .then(reply => {
         this.locale = reply.payload;
