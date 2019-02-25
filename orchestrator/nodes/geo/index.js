@@ -1,15 +1,12 @@
 "use strict";
 
-let fs = require('fs');
-let path = require('path');
-var logger = require("../../logger").logger;
+const path = require('path');
+const logger = require("../../logger").logger;
+const geolib = require('geolib');
+const dojot = require('@dojot/flow-node');
 
-var geolib = require('geolib');
+class DataHandler extends dojot.DataHandlerBase {
 
-// Sample node implementation
-class DataHandler {
-    constructor() {
-    }
 
     /**
      * Returns full path to html file
