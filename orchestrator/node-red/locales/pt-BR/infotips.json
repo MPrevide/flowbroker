@@ -1,23 +1,23 @@
 {
-    "info": {
-        "tip0" : "You can remove the selected nodes or links with {{core:delete-selection}}",
-        "tip1" : "Search for nodes using {{core:search}}",
-        "tip2" : "{{core:toggle-sidebar}} will toggle the view of this sidebar",
-        "tip3" : "You can manage your palette of nodes with {{core:manage-palette}}",
-        "tip4" : "Your flow configuration nodes are listed in the sidebar panel. It can been accessed from the menu or with {{core:show-config-tab}}",
-        "tip5" : "Enable or disable these tips from the option in the settings",
-        "tip6" : "Move the selected nodes using the [left] [up] [down] and [right] keys. Hold [shift] to nudge them further",
-        "tip7" : "Dragging a node onto a wire will splice it into the link",
-        "tip8" : "Export the selected nodes, or the current tab with {{core:show-export-dialog}}",
-        "tip9" : "Import a flow by dragging its JSON into the editor, or with {{core:show-import-dialog}}",
-        "tip10" : "[shift] [click] and drag on a node port to move all of the attached wires or just the selected one",
-        "tip11" : "Show the Info tab with {{core:show-info-tab}} or the Debug tab with {{core:show-debug-tab}}",
-        "tip12" : "[ctrl] [click] in the workspace to open the quick-add dialog",
-        "tip13" : "Hold down [ctrl] when you [click] on a node port to enable quick-wiring",
-        "tip14" : "Hold down [shift] when you [click] on a node to also select all of its connected nodes",
-        "tip15" : "Hold down [ctrl] when you [click] on a node to add or remove it from the current selection",
-        "tip16" : "Switch flow tabs with {{core:show-previous-tab}} and {{core:show-next-tab}}",
-        "tip17" : "You can confirm your changes in the node edit tray with {{core:confirm-edit-tray}} or cancel them with {{core:cancel-edit-tray}}",
-        "tip18" : "Pressing {{core:edit-selected-node}} will edit the first node in the current selection"
-    }
+  "info": {
+    "tip0": "Você pode remover os nós ou links selecionados com {{core: delete-selection}}",
+    "tip1": "Pesquise por nós usando {{core: search}}",
+    "tip2": "{{core: toggle-sidebar}} irá alternar a visualização desta barra lateral",
+    "tip3": "Você pode gerenciar sua paleta de nós com {{core: manage-palette}}",
+    "tip4": "Seus nós de configuração de fluxo estão listados no painel da barra lateral. Ele pode ser acessado a partir do menu ou com {{core: show-config-tab}}",
+    "tip5": "Ativar ou desativar essas dicas da opção nas configurações",
+    "tip6": "Mova os nós selecionados usando as teclas [esquerda] [para cima] [para baixo] e [direita]. Segure [shift] para pressioná-los ainda mais",
+    "tip7": "Arrastar um nó para um fio irá uni-lo ao link",
+    "tip8": "Exportar os nós selecionados, ou a aba atual com {{core: show-export-dialog}}",
+    "tip9": "Importe um fluxo arrastando seu JSON para o editor ou com {{core: show-import-dialog}}",
+    "tip10": "[shift] [clique] e arraste na porta de um nó para mover todos os fios conectados ou apenas o selecionado",
+    "tip11": "Mostra a aba Info com {{core: show-info-tab}} ou a aba Debug com {{core: show-debug-tab}}",
+    "tip12": "[ctrl] [clique] na área de trabalho para abrir a caixa de diálogo de adição rápida",
+    "tip13": "Mantenha pressionado [ctrl] quando você [clica] em uma porta de nó para habilitar a fiação rápida",
+    "tip14": "Mantenha pressionado [shift] quando você [clique] em um nó para também selecionar todos os nós conectados",
+    "tip15": "Mantenha pressionado [ctrl] quando você [clica] em um nó para adicioná-lo ou removê-lo da seleção atual",
+    "tip16": "Alterne as guias de fluxo com {{core: show-previous-tab}} e {{core: show-next-tab}}",
+    "tip17": "Você pode confirmar suas alterações na bandeja de edição de nós com {{core: confirm-edit-tray}} ou cancelá-las com {{core: cancel-edit-tray}}",
+    "tip18": "Pressionar {{core: editar nó selecionado}} irá editar o primeiro nó na seleção atual"
+  }
 }

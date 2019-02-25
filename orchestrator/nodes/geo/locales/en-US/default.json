@@ -8,5 +8,6 @@
   "text": {
     "inside": "only points inside",
     "outside": "only points outside"
-  }
+  },
+  "category": "location"
 }

@@ -12,5 +12,6 @@
   },
   "text": {
     "property_context": "Propriedade para armazenar o conteúdo do contexto"
-  }
+  },
+  "category": "contexto"
 }

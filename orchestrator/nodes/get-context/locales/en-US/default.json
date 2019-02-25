@@ -12,5 +12,6 @@
   },
   "text": {
     "property_context": "Property to store the context content"
-  }
+  },
+  "category": "context"
 }
