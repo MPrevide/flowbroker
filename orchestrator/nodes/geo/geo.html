@@ -25,8 +25,8 @@
         <label for="node-input-filter">
             <i class="fa fa-sign-in"></i> <span data-i18n="label.filter"></label>
         <select id="node-input-filter" value="true" style="width: 70%;">
-            <option value="inside"> <span data-i18n="text.inside"> </option>
-            <option value="outside"> <span data-i18n="text.outside"> </option>
+            <option value="inside" data-i18n="text.inside"> </option>
+            <option value="outside"  data-i18n="text.outside"> </option>
         </select>
     </div>
 
@@ -78,9 +78,9 @@
         inputs: 1,
         outputs: 1,
         label: function () {
-            return this.name ||  RED._('dojot/geo:title');
+            return this.name ||  RED._('dojot/geofence:title');
         },
-        paletteLabel:  RED._('dojot/geo:title'),
+        paletteLabel:  RED._('dojot/geofence:title'),
 
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
