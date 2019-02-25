@@ -1,7 +1,7 @@
 {
   "label": {
     "name": "Nome",
-    "actuate": "Atuador",
+    "actuate": "atuador",
     "action": "Ação",
     "self": "O dispositivo que desencadeou o fluxo",
     "configured": "Um dispositivo específico",

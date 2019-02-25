@@ -1,9 +1,9 @@
 {
   "title": "dispositivo",
   "label": {
-    "device": "dispositivo",
+    "device": "Dispositivo",
     "name": "Nome",
-    "status": "Status",
+    "status": "Status"
   },
   "text": {
     "select_device": "Selecione um dispositivo",

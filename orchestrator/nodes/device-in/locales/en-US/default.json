@@ -3,7 +3,7 @@
   "label": {
     "device": "device",
     "name": "Name",
-    "status": "Status",
+    "status": "Status"
   },
   "text": {
     "select_device": "Select a device",

@@ -1,7 +1,7 @@
 {
   "label": {
     "name": "Name",
-    "actuate": "Actuate",
+    "actuate": "actuate",
     "action": "Action",
     "self": "The device which triggered the flow",
     "configured": "A specific device",

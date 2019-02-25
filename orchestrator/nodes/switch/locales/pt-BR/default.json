@@ -3,52 +3,52 @@
   "common": {
     "label": {
       "payload": "Payload",
-      "topic": "Topic",
-      "name": "Name",
-      "username": "Username",
-      "password": "Password"
+      "topic": "Tópico",
+      "name": "Nome",
+      "username": "Nome de usuário",
+      "password": "Senha"
     },
     "status": {
-      "connected": "connected",
-      "not-connected": "not connected",
-      "disconnected": "disconnected",
-      "connecting": "connecting",
-      "error": "error",
+      "connected": "conectado",
+      "not-connected": "não conectado",
+      "disconnected": "desconectado",
+      "connecting": "conectando",
+      "error": "erro",
       "ok": "OK"
     },
     "notification": {
-      "error": "<strong>Error</strong>: __message__",
+      "error": "<strong>Erro</strong>: __message__",
       "errors": {
-        "not-deployed": "node not deployed",
-        "no-response": "no response from server",
-        "unexpected": "unexpected error (__status__) __message__"
+        "not-deployed": "nó não implantado",
+        "no-response": "nenhuma resposta do servidor",
+        "unexpected": "erro inesperado (__status__) __message__"
       }
     },
     "errors": {
-      "nooverride": "Warning: msg properties can no longer override set node properties. See bit.ly/nr-override-msg-props"
+      "nooverride": "Aviso: as propriedades msg não podem mais substituir as propriedades do nó definido. Consulte bit.ly/nr-override-msg-props"
     }
   },
   "switch": {
     "label": {
-      "property": "Property",
-      "rule": "rule"
+      "property": "Propriedade",
+      "rule": "regra"
     },
-    "and": "and",
-    "checkall": "checking all rules",
-    "stopfirst": "stopping after first match",
-    "ignorecase": "ignore case",
+    "and": "e",
+    "checkall": "verificando todas as regras",
+    "stopfirst": "parando após o primeiro",
+    "ignorecase": "ignorar maiúsculas e minúsculas",
     "rules": {
-      "btwn": "is between",
-      "cont": "contains",
-      "regex": "matches regex",
-      "true": "is true",
+      "btwn": "está entre",
+      "cont": "contém",
+      "regex": "corresponde a regex",
+      "true": "é verdadeiro",
       "false": "is false",
-      "null": "is null",
-      "nnull": "is not null",
-      "else": "otherwise"
+      "null": "é falso",
+      "nnull": "não é nulo",
+      "else": "caso contrário"
     },
     "errors": {
-      "invalid-expr": "Invalid expression: __error__"
+      "invalid-expr": "Expressão inválida: __error__"
     }
   }
 }

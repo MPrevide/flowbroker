@@ -10,8 +10,8 @@
   <div class="form-row">
        <label for="node-input-status"><i class="fa fa-bell" /> <span data-i18n="label.status"></label>
        <select id="node-input-status" value='false' style="width: 70%;">
-            <option value='false'><span data-i18n="text.exclude"></option>
-            <option value='true'><span data-i18n="text.include"></option>
+            <option value='false'  data-i18n="text.exclude"></option>
+            <option value='true'  data-i18n="text.include"></option>
         </select>
    </div>
   <div style="display:none">
@@ -47,9 +47,9 @@
        color: "#679BF3",        // background-color
        label: function() {
            // sets the default label contents
-           return this.name || RED._('dojot/template-in:title');
+           return this.name || RED._('dojot/device-template-in:title');
        },
-       paletteLabel:  RED._('dojot/template-in:title'),
+       paletteLabel:  RED._('dojot/device-template-in:title'),
        labelStyle: function() {
            // sets the class to apply to the label
            return this.name ? "node_label_italic" : "";
