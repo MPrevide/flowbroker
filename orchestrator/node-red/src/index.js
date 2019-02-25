@@ -17,7 +17,7 @@ module.exports = class NodeAPI {
         app.use(express.static(path.join(__dirname, '../public')));
 
         app.get('/locales/*', (req, res) => {
-    console.log('hey');
+
             const language = Locale.getSlugLanguage(req);
 
             const resource = req.path.slice(9);
@@ -41,12 +41,12 @@ module.exports = class NodeAPI {
                 const nodeid = resource.match(/[^/]+$/)[0];
                 let handler = nodes.getNode(nodeid, service);
                 if (handler) {
-                    return res.status(200).send(handler.getLocaleData(language));
+                    return res.status(200).send(handler.getLocaleData(language, Locale.getSlugDefaultLanguage() ));
                 }
 
                 handler = nodes.getNode(nodeid.replace(/-/g, ' '), service);
                 if (handler) {
-                    return res.status(200).send(handler.getLocaleData(language));
+                    return res.status(200).send(handler.getLocaleData(language, Locale.getSlugDefaultLanguage() ));
                 }
 
                 return res.status(404).send({message: "Unknown node"});

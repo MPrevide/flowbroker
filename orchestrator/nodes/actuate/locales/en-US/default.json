@@ -11,6 +11,8 @@
     "source": "Source"
   },
   "text": {
-    "value_virtual": "Set the value of a virtual device, based on the results of the previous operations on the flow."
+    "value_virtual": "Set the value of a virtual device, based on the results of the previous operations on the flow.",
+    "attr_placeholder": "Enter an attribute",
+    "select_dev_placeholder": "Select a device"
   }
 }

@@ -1,4 +1,5 @@
 {
+  "title": "switch",
   "common": {
     "label": {
       "payload": "Payload",
@@ -27,29 +28,27 @@
       "nooverride": "Warning: msg properties can no longer override set node properties. See bit.ly/nr-override-msg-props"
     }
   },
-  "change": {
+  "switch": {
     "label": {
-      "rules": "Rules",
-      "rule": "rule",
-      "set": "set __property__",
-      "change": "change __property__",
-      "delete": "delete __property__",
-      "move": "move __property__",
-      "changeCount": "change: __count__ rules",
-      "regex": "Use regular expressions"
+      "property": "Property",
+      "rule": "rule"
     },
-    "action": {
-      "set": "Set",
-      "change": "Change",
-      "delete": "Delete",
-      "move": "Move",
-      "to": "to",
-      "search": "Search for",
-      "replace": "Replace with"
+    "and": "and",
+    "checkall": "checking all rules",
+    "stopfirst": "stopping after first match",
+    "ignorecase": "ignore case",
+    "rules": {
+      "btwn": "is between",
+      "cont": "contains",
+      "regex": "matches regex",
+      "true": "is true",
+      "false": "is false",
+      "null": "is null",
+      "nnull": "is not null",
+      "else": "otherwise"
     },
     "errors": {
-      "invalid-from": "Invalid 'from' property: __error__",
-      "invalid-json": "Invalid 'to' JSON property"
+      "invalid-expr": "Invalid expression: __error__"
     }
   }
 }

@@ -23,21 +23,17 @@
 
     <div class="form-row">
         <label for="node-input-filter">
-            <i class="fa fa-sign-in"></i> Filter</label>
+            <i class="fa fa-sign-in"></i> <span data-i18n="label.filter"></label>
         <select id="node-input-filter" value="true" style="width: 70%;">
-            <option value="inside">only points inside</option>
-            <option value="outside">only points outside</option>
-            <!--
-                <option value="enters">enters area</option>
-                <option value="exits">exits area</option>
-            -->
+            <option value="inside"> <span data-i18n="text.inside"> </option>
+            <option value="outside"> <span data-i18n="text.outside"> </option>
         </select>
     </div>
 
     <div class="form-row">
         <label for="node-input-name">
-            <i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Geofence name">
+            <i class="icon-tag"></i> <span data-i18n="label.name"></label>
+        <input type="text" id="node-input-name" data-i18n="[placeholder]label.geofence_name" >
     </div>
 </script>
 
@@ -82,8 +78,10 @@
         inputs: 1,
         outputs: 1,
         label: function () {
-            return this.name || "geofence";
+            return this.name ||  RED._('dojot/geo:title');
         },
+        paletteLabel:  RED._('dojot/geo:title'),
+
         labelStyle: function () {
             return this.name ? "node_label_italic" : "";
         },

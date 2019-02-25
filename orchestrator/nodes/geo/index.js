@@ -34,20 +34,13 @@ class DataHandler {
     }
 
     /**
-     * Returns object with locale data (for the given locale)
-     * @param  {[string]} locale Locale string, such as "en-US"
-     * @return {[object]}        Locale settings used by the module
+     * Returns full path to locales
+     * @returns {void | Promise<void> | Promise<any>}
      */
-    getLocaleData(locale) {
-
-        let filepath = path.join(__dirname, "locales/" + locale + "/geo.json");
-        if (fs.existsSync(filepath)) {
-            return require(filepath);
-        } else {
-            return null;
-        }
-
+    getLocalesPath() {
+        return path.resolve(__dirname, './locales');
     }
+
 
     /**
      * Check if the node configuration is valid
@@ -112,7 +105,7 @@ class DataHandler {
         /**
          * Look for a lat,lng string repesentation and return an
          * object representation of it if any is found.
-         * 
+         *
          * @param  {[object]}  payload Message payload
          * @return {[{latitude: string, longitude: string}]}
          */

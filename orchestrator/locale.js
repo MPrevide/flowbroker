@@ -39,9 +39,9 @@ module.exports = Locale;
 // const userLang = navigator.language || navigator.userLanguage;
 // console.log('userLang', userLang);
 // let dicLang = {
-//     "pt-BR-----": "pt-BR-----",
-//     "pt": "pt-BR-----",
-//     "pt-pt": "pt-BR-----",
+//     "pt-BR": "pt-BR",
+//     "pt": "pt-BR",
+//     "pt-pt": "pt-BR",
 //     default: "en-US"
 // };
 // const finalLang = dicLang[userLang]? dicLang[userLang] : dicLang.default;
