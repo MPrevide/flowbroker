@@ -176,7 +176,7 @@ Reconfigure a particular flow - the old configuration will be removed and the ne
 + Response 500
 
         {
-          "msg" : "Failed to update flows" | "Failed to switch tenancy context"
+          "msg" : "failed to update flows" | "Failed to switch tenancy context"
         }
 
 ### Remove the flow [DELETE /v1/flow/{id}]
@@ -207,7 +207,7 @@ Removes the flow and its configuration.
 + Response 500
 
         {
-          "msg" : "Failed to remove flow" | "Failed to switch tenancy context"
+          "msg" : "failed to remove flow" | "Failed to switch tenancy context"
         }
 
 + Response 404
@@ -298,7 +298,7 @@ Removes a remote node
 + Response 500
 
         {
-          "message": "Failed to remove node."
+          "message": "failed to remove node."
         }
 
 ### Remove all remote nodes [DELETE /v1/node]
@@ -318,7 +318,7 @@ Removes a remote node
 + Response 500 (application/json; charset=utf-8)
 
         {
-          "message": "Failed to remove node."
+          "message": "failed to remove node."
         }
 
 
