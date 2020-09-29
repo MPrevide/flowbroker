@@ -49,25 +49,25 @@ A example of content in a  __Message Catalog__:
  }
 ```
 
-#### Using i18n messages 
+#### Using i18n messages
 
-##### Runtime 
+##### Runtime
 The runtime part of a node can access messages using the RED._() function. For example:
 
-```javascript 
+```javascript
 console.log(RED._("myNode.message1"));
 ```
 
 With namespace, the namespace will be the __id__ of node
-```javascript 
+```javascript
 console.log(RED._("__id__:myNode.message1"));
 ```
 
-##### Editor 
+##### Editor
 
 Any HTML element provided in the node template can specify a data-i18n attribute to provide the message identify to use. For example:
 
-```html 
+```html
 <span data-i18n="myNode.label.foo"></span>
 
 <input type="text" data-i18n="[placeholder]myNode.placeholder.foo">
@@ -77,7 +77,7 @@ Any HTML element provided in the node template can specify a data-i18n attribute
 
 ## Samples
 
-The directory samples contains some examples of nodes, they can be used as reference to build your own node.
+The directory samples contains two examples of nodes. One that converts a Celcius temperature measure into Kelvin and another one that calculates the arithmetic mean using *Flowbroker Context Manager*. They can be used as reference to build your own node.
 
 We will explain the node structure using [samples/kevin](./samples/kevin) node. There, you will find:
 
@@ -114,8 +114,7 @@ JWT=$(curl -s -X POST http://localhost:8000/auth \
 -d '{"username": "admin", "passwd" : "admin"}' | jq -r ".jwt")
 ```
 
-Note: the previous command requires the `jq`and `curl` command, you can install it on ubuntu
-with the following command:
+Note: the previous command requires the `jq`and `curl` command, you can install it on ubuntu with the following command:
 ```
 sudo apt-get install jq
 sudo apt-get install curl
@@ -147,7 +146,6 @@ This lib has been developed and tested using node v8.14.x
 ```sh
 sudo docker logs -f -t $(sudo docker ps -aqf "ancestor=<your dockerHub username>/<node name>:<unique-id>")
 ```
-
 
 Note: the DockerHub use is optional, you can use a private docker registry instead.
 

@@ -1,6 +1,7 @@
 # About
 
 This is a Dojot's flowbroker node that calculates the arithmetic mean.
+This node uses the Flowbroker Context Manager that allows a given set of data to persist beyond the life of the event.
 
 # How to build and add it to Dojot
 
