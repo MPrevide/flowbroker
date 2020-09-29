@@ -114,10 +114,11 @@ JWT=$(curl -s -X POST http://localhost:8000/auth \
 -d '{"username": "admin", "passwd" : "admin"}' | jq -r ".jwt")
 ```
 
-Note: the previous command requires the `jq` command, you can install it on ubuntu
+Note: the previous command requires the `jq`and `curl` command, you can install it on ubuntu
 with the following command:
 ```
 sudo apt-get install jq
+sudo apt-get install curl
 ```
 
 How to add a node to Dojot:
