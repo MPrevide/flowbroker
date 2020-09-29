@@ -136,7 +136,7 @@ curl -X DELETE -H "Authorization: Bearer ${JWT}" http://localhost:8000//flows/v1
 ```
 
 
-ATTENTION: The `id` to add the node via API (when request `/flows/v1/node`) must be the same as `name` and `id` defined in `getMetadata` in the class that extends `dojot.DataHandlerBase`. And within the html called in the `getNodeRepresentationPath` method also in the class that extends `dojot.DataHandlerBase`, the references inside the html `data-template-name=`, `data-help-name=`, `registerType(..` ,  and `RED._("...` must have this same `id`/`name`.
+**ATTENTION**: The `id` to add the node via API (when request `/flows/v1/node`) must be the same as `name` and `id` defined in `getMetadata` in the class that extends `dojot.DataHandlerBase`. And within the html called in the `getNodeRepresentationPath` method also in the class that extends `dojot.DataHandlerBase`, the references inside the html `data-template-name=`, `data-help-name=`, `registerType(..` ,  and `RED._("...` must have this same `id`/`name`.
 
 
 #### Tip: To view the logs from your remote node run:
