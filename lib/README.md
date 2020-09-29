@@ -94,7 +94,7 @@ We will explain the node structure using [samples/kevin](./samples/kevin) node. 
 
 ### How to build your own node and add in to Dojot
 
-This section explains how to build the nodes in a generic way, if you want specific instructions, please, consult the node's documentation.
+This section explains how to build the nodes in a generic way.
 
 
 Build the docker image:
@@ -127,7 +127,7 @@ curl -H "Authorization: Bearer ${JWT}" http://localhost:8000/flows/v1/node -H 'c
 ```
 Now the node will be available on the FlowBroker Dojot's interface.
 
-**Note:** If you need to change the code from the node, you need to  rebuild the container, push it to the registry, remove the node from dojot and add the new node to dojot again. Always change the `<image tag>` of the docker image, to force the update and see your changes reflected.
+**Note:** If you need to change the code from the node and see it reflected, you need to:  rebuild the container; push it to the registry; remove the node from dojot; and add the node to dojot again. Always change the `<image tag>` of the docker image, to force the update and see your changes reflected.
 
 How to remove a node from Dojot:
 
@@ -136,10 +136,10 @@ curl -X DELETE -H "Authorization: Bearer ${JWT}" http://localhost:8000//flows/v1
 ```
 
 
-ATTENTION: The `id` to add the node via API (when request `/flows/v1/node`) must be the same as `name` and `id` defined in `getMetadata` in the class that extends `dojot.DataHandlerBase`. And within the html called in the `getNodeRepresentationPath` method also in the class that extends `dojot.DataHandlerBase` the references inside the html `data-template-name=`, `data-help-name=`, `registerType(..` ,  and `RED._("...` must have this same `id`/`name`.
+ATTENTION: The `id` to add the node via API (when request `/flows/v1/node`) must be the same as `name` and `id` defined in `getMetadata` in the class that extends `dojot.DataHandlerBase`. And within the html called in the `getNodeRepresentationPath` method also in the class that extends `dojot.DataHandlerBase`, the references inside the html `data-template-name=`, `data-help-name=`, `registerType(..` ,  and `RED._("...` must have this same `id`/`name`.
 
 
-##### Tip: To view the logs from your remote node run:
+#### Tip: To view the logs from your remote node run:
 
 ```sh
 sudo docker logs -f -t $(sudo docker ps -aqf "ancestor=<your dockerHub username>/<node name>:<unique-id>")
