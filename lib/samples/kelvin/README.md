@@ -38,4 +38,4 @@ Now the Kelvin node will be available on `converters` category into the FlowBrok
 Note: the DockerHub use is optional, you can use a private docker registry instead.
 
 Note2: All commands considers that you are running Dojot locally, if it is not
-the case, please, adapt them to refect your scenario.
+the case, please, adapt them to reflect your scenario.
