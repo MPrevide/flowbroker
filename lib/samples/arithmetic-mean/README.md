@@ -22,8 +22,7 @@ JWT=$(curl -s -X POST http://localhost:8000/auth \
 -d '{"username": "admin", "passwd" : "admin"}' | jq -r ".jwt")
 ```
 
-Note: the previous command requires the `jq` command, you can install it on ubuntu
-with the following command:
+Note: the previous command requires the `jq` command, you can install it on on Debian-based Linux distributions with the following command:
 ```
 sudo apt-get install jq
 ```
