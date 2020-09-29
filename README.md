@@ -17,22 +17,21 @@ A flow is a sequence of functional blocks (nodes) to process incoming particular
 
 There are many blocks (nodes) already ready, in general these blocks can be divided into:
 
-- **entry point**: a block (node) representing what is the trigger to start a particular flow.
-  This block might be a device, a event cron, etc.
-- **processing blocks**: a set of blocks (nodes) that perform operations using the event. The blocks (nodes) might be: testing content for particular values or ranges, geo-positioning analysis, changing message attributes, perform operations on external elements, and so on.
-- **exit point**: a block (node) representing where the resulting data should be forwarded to. This block might be a database, a virtual device, an external element, and so on.
+- **entry point**: blocks (nodes) that represent triggers to start a given flow. These blocks might be a device, a cron event, etc.
+- **processing blocks**: blocks (nodes) that perform operations using the event. The blocks (nodes) might be: testing content for particular values or ranges, geo-positioning analysis, changing message attributes, perform operations on external elements, and so on.
+- **exit point**: blocks (nodes) that represent where the resulting data should be forwarded to. These blocks might be a database, a virtual device, an external element, and so on.
 
-The flowbroker orchestrator is implemented under the directory `orchestrator`.
+The flowbroker orchestrator is implemented under the directory [`orchestrator`](./orchestrator).
 
 ### Flowbroker Context Manager
 
 The flowbroker context manager is a mechanism that allows a given set of data to persist beyond the life of the event, thus making it possible to store a state for the elements of the solution.
 
-The flowbroker context manager is implemented under the directory `contextManager`
+The flowbroker context manager is implemented under the directory [`contextManager`](./contextManager).
 
 ### Flowbroker Library
 
-The flowbroker library  that abstracts communication from the *orchestrator* to the nodes themselves (e.g. change, email) is implemented under `lib`
+The flowbroker library  that abstracts communication from the *orchestrator* to the nodes themselves (e.g. change, email) is implemented under [`lib`](./lib)
 
 It's possible to create new blocks (nodes) using the **flowbroker library**, it will be explained in the following topics.
 
@@ -40,8 +39,8 @@ It's possible to create new blocks (nodes) using the **flowbroker library**, it 
 
 The services dependencies are listed in the next topics.
 
-- Dojot Services: They are dojot's microservices
-- Others Services: They are external's microservices 
+- Dojot Services: They are dojot services
+- Others Services: They are external services
 
 ### Flowbroker Orchestrator
 
@@ -84,22 +83,22 @@ Key                    | Purpose                                                
 ---------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------- | ----------------------------- |
 FLOWBROKER_CACHE_HOST | Redis cache hostname    | flowbroker-redis   | Hostname
 DEVICE_MANAGER_HOST   | Device Manager host address | http://device-manager:5000  | url
-MONGO_URL             | mongo database's address    | mongodb://mongodb:27017  | url
-REPLICA_SET           | mongo database's replica set address  | None  | url
+MONGO_URL             | Mongo database's address    | mongodb://mongodb:27017  | url
+REPLICA_SET           | Mongo database's replica set address  | None  | url
 AMQP_URL              | RabbitMQ host address    | amqp://rabbitmq  | url
 AMQP_PREFIX_TASK_QUEUE | RabbitMQ prefix of the queues that map the tasks to be performed, each block (node) can be seen as a task.   | task_queue  | string
-AMQP_TASK_QUEUE_N      | number of task queues to be used    | 10  | natural number
+AMQP_TASK_QUEUE_N      | Number of task queues to be used    | 10  | natural number
 AMQP_PREFIX_EVENT_QUEUE | RabbitMQ prefix of queues that map kafka messages in order to ensure order of tasks    | event_queue  | string
-AMQP_EVENT_QUEUE_N      | number of event queues to be used    | 10  | natural number
+AMQP_EVENT_QUEUE_N      | Number of event queues to be used    | 10  | natural number
 DEPLOY_ENGINE           | Choose the type of deployment. It will be used with remote nodes.     | kubernetes  | "kubernetes" or "docker"
-KUBERNETES_SERVICE_HOST | kubernetes service host (is automatically passed to services on the k8s)    | None  | hostname/ip
-KUBERNETES_PORT_443_TCP_PORT |  kubernetes service port  (is automatically passed to services on the k8s). It will be used with remote nodes.   | None  | port
+KUBERNETES_SERVICE_HOST | Kubernetes service host (is automatically passed to services on the k8s)    | None  | hostname/ip
+KUBERNETES_PORT_443_TCP_PORT |  Kubernetes service port  (is automatically passed to services on the k8s). It will be used with remote nodes.   | None  | port
 KUBERNETES_TOKEN | Credential (token) for service account, if nothing is passed it will be used the file at `/var/run/secrets/kubernetes.io/serviceaccount/token`.  It will be used with remote nodes.  | "" (empty string) | string token
 DOCKER_SOCKET_PATH | The unix socket (TCP sockets to communicate with nodes running in Docker). It will be used with remote nodes. | /var/run/docker.sock | path
 FLOWBROKER_NETWORK | Docker network.  It will be used with remote nodes. | dojot | string
 CONTEXT_MANAGER_ADDRESS | **Flowbroker context manager** hostname | flowbroker-context-manager | hostname
 CONTEXT_MANAGER_PORT | **Flowbroker context manager** port | 5556 | port
-CONTEXT_MANAGER_RESPONSE_TIMEOUT | How long the client should wait for a response (to save/get a context). This time value is in ms | 10000 | milliseconds
+CONTEXT_MANAGER_RESPONSE_TIMEOUT | How long the client should wait for a response (to save/get a context). | 10000 | milliseconds
 LOG_LEVEL | Log level | info | info, warn, debug, error
 
 Some environment variables are used by dojot libraries that flowbroker uses.
@@ -120,13 +119,14 @@ KAFKA_HOSTS                | List of Kafka instances                            
 
 
 #### **Flowbroker Context Manager**
-
+Key                    | Purpose                                                                                     | Default Value                       | Valid Values                  |
+---------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------- | -----------------------------
 ZOOKEEPER_HOST | Zookeeper hostname | zookeeper | hostname/IP
 ZOOKEEPER_PORT | Zookeeper port | 2181 | port
 SERVICE_PORT | Service port for change log level | 80 | port
 ZEROMQ_PORT | ZeroMQ port | 5556 | port
-HOLD_LOCK_TIMEOUT | how long a client can hold a lock (time in ms) | 10000 | milliseconds
-WAIT_LOCK_TIMEOUT | how long a client can wait for a lock (time in ms) | 30000 | milliseconds
+HOLD_LOCK_TIMEOUT | How long a client can hold a lock  | 10000 | milliseconds
+WAIT_LOCK_TIMEOUT | How long a client can wait for a lock  | 30000 | milliseconds
 LOG_LEVEL | Log level | info | info, warn, debug, error
 
 # How to run
