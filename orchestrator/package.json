@@ -32,7 +32,7 @@
     }
   ],
   "dependencies": {
-    "@dojot/dojot-module": "^0.1.1",
+    "@dojot/dojot-module": "git://github.com/dojot/dojot-module-nodejs.git#feature/keycloak_10.0.1-update",
     "@dojot/dojot-module-logger": "^0.1.0",
     "@dojot/flow-node": "../lib",
     "@dojot/healthcheck": "^0.1.0",
