@@ -5,12 +5,15 @@ const APP_PORT = 5002;
 function initExpressApp() {
   const app = express();
   app.use((req, res, next) => {
-    console.log('----------------------- req', req.path);
     const rawToken = req.header("authorization");
     if (rawToken !== undefined) {
       const token = rawToken.split(".");
       const tokenData = JSON.parse(Buffer.from(token[1], "base64").toString());
-      req.service = tokenData.service;
+      if (tokenData.service) {
+        req.service = tokenData.service;
+      } else if (tokenData.iss) {
+        req.service = tokenData.iss.substring(tokenData.iss.lastIndexOf('/') + 1);
+      }
     }
     next();
   });
